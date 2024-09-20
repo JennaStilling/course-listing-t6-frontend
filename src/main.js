@@ -1,8 +1,8 @@
-import './assets/main.css'
+import './assets/style.css'
 
 import router from "./router.js";
 
 import { createApp } from 'vue'
-import FirstPage from './views/CourseList.vue' //directory for first page
+import App from './App.vue' //directory for first page
 
-createApp(FirstPage).mount('#app')
+createApp(App).use(router).mount('#app');

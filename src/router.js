@@ -15,9 +15,9 @@ const router = createRouter({
     },
     {
       path: "/course/:id",
-      name: "course ",
+      name: "course",
       component: DisplayCourse,
-	  props: true,
+	    props: true,
     },
     {
       path: "/add",
