@@ -1,42 +1,40 @@
-@import './base.css';
-
-#app {
-  max-width: 1440px;
-  max-height: 1024px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-  background-color: #FFF;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
-
-.desktop-course {
+<template>
+	<div class="desktop-course">
+	  <div class="div">
+		<img class="top-bar" alt="Top bar" src="top-bar.png" />
+		<div class="greetings">
+		  <div class="overlap-group">
+			<div class="hello-name-here">Hello, &lt;name here&gt;!</div>
+		  </div>
+		</div>
+		<div class="course-listing">
+		  <div class="overlap">
+			<div class="text-wrapper">Courses</div>
+			<div class="search-edit-or">Search,&nbsp;&nbsp;edit, or delete courses</div>
+			<div class="text-wrapper-2">Title</div>
+			<div class="text-wrapper-3">Description</div>
+			<div class="text-wrapper-4">Actions</div>
+			<div class="overlap-group-2">
+			  <div class="text-wrapper-5">Temp</div>
+			  <div class="text-wrapper-6">Temp Desc.</div>
+			  <img class="pencil" alt="Pencil" src="pencil-1.svg" />
+			  <img class="list" alt="List" src="list-1.svg" />
+			  <img class="delete" alt="Delete" src="delete-1.svg" />
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </template>
+  
+  <script>
+  export default {
+	name: "DesktopCourse",
+  };
+  </script>
+  
+  <style>
+  .desktop-course {
 	background-color: #ffffff;
 	display: flex;
 	flex-direction: row;
@@ -237,3 +235,4 @@ a,
 	top: 16px;
 	width: 50px;
   }
+  </style>
