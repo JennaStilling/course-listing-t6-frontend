@@ -17,9 +17,9 @@
 			<div class="overlap-group-2">
 			  <div class="text-wrapper-5">Temp</div>
 			  <div class="text-wrapper-6">Temp Desc.</div>
-			  <img class="pencil" alt="Pencil" src="pencil-1.svg" />
-			  <img class="list" alt="List" src="list-1.svg" />
-			  <img class="delete" alt="Delete" src="delete-1.svg" />
+			  <img class="pencil" alt="Pencil" src="./assets/AccountCircle.png" />
+			  <img class="list" alt="List" src="./assets/List.png" />
+			  <img class="delete" alt="Delete" src="./assets/Delete.png" />
 			</div>
 		  </div>
 		</div>
