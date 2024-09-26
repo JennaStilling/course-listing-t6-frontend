@@ -26,23 +26,11 @@ onMounted(() => {
       console.log(error);
     });
 });
-function updateCourse() {
-  CourseServices.updateCourse(course.value)
-    .then(() => {
-        //change this if needed
-      router.push({ name: "list" });
-    })
-    .catch((error) => {
-      if (error.response.status == "406") {
-        for (let obj of error.response.data) {
-          errors.value[obj.attributeName] = obj.message;
-        }
-      } else {
-        message.value = "Error: " + error.code + ":" + error.message;
-        console.log(error);
-      }
-    });
+
+function cancel() {
+  router.push({ name: "editCourse" });
 }
+
 function cancel() {
   router.push({ name: "courses" });
 }
@@ -113,8 +101,8 @@ function cancel() {
         </div>
       </div>
       <br />
-      <button class="success" name="Save" v-on:click.prevent="updateCourse()">
-        Update
+      <button class="success" name="editCourse" v-on:click.prevent="edit()">
+        Edit
       </button>
       <button name="cancel" v-on:click.prevent="cancel()">Cancel</button>
     </div>
