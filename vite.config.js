@@ -1,22 +1,14 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vuetify from "vite-plugin-vuetify";
-
-import dns from "dns";
-dns.setDefaultResultOrder("verbatim");
-
-export default () => {
-  const baseURL =
-    process.env.APP_ENV === "development" ? "/" : "/2024/project2/t6";
-
-  return defineConfig({
-    plugins: [vue(), vuetify({ autoImport: true })],
-
-    server: {
-      host: "localhost",
-      port: 8081,
-    },
-
-    base: baseURL,
-  });
-};
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  }
+})
