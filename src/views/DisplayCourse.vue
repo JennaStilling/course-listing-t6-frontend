@@ -17,8 +17,8 @@ const errors = ref({});
 
 onMounted(() => {
   CourseServices.getCourse(props.id)
-    .then((response) => {
-      course.value = response.data[0];
+    .then(response => {
+      course.value = response.data.course;
       message.value = "";
     })
     .catch((error) => {
@@ -27,7 +27,7 @@ onMounted(() => {
     });
 });
 
-function cancel() {
+function edit() {
   router.push({ name: "editCourse" });
 }
 
