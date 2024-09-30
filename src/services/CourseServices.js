@@ -2,9 +2,9 @@ import axios from "axios";
 
 var baseurl = "";
 if (process.env.NODE_ENV === "development") {
-  baseurl = "http://localhost/courseapi/";
+  baseurl = "http://localhost:3016/course-t6";
 } else {
-  baseurl = "/courseapi/";
+  baseurl = "/course-t6";
 }
 
 const apiClient = axios.create({
@@ -36,16 +36,16 @@ const apiClient = axios.create({
 
 export default {
   getCourses() {
-    return apiClient.get("courses");
+    return apiClient.get("/courses");
   },
   getCourse(id) {
-    return apiClient.get("courses/" + id);
+    return apiClient.get("/courses/" + id);
   },
   addCourse(course) {
-    return apiClient.post("courses", course);
+    return apiClient.post("/courses", course);
   },
   updateCourse(courseId, course) {
-    return apiClient.put("courses/" + courseId, course);
+    return apiClient.put("/courses/" + courseId, course);
   },
   // deleteList(listId) {
   //   return apiClient.delete("lists/" + listId);

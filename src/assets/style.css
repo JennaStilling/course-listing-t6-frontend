@@ -1,39 +1,3 @@
-/* @import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
-
 /* Navbar stuff */
 #app {
   font-family: "Roboto", sans-serif;
@@ -71,6 +35,7 @@ li {
   padding: 20px;
   background-color: white;
   color: #2c3e50;
+  margin-bottom: 40px;
 }
 
 .nav-links .menu a {
@@ -253,4 +218,85 @@ select {
   background: inherit;
   border-radius: 0.25rem;
   width: 100%;
+}
+
+/* Course List Designs */
+.header {
+  margin: auto;
+  width: 1000px;
+  height: 80px;
+  flex-shrink: 0;
+  background: var(--Light-Gray, #EEE);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.course-list-body {
+  margin: auto;
+  width: 1000px;
+  height: auto;
+  flex-shrink: 0;
+  background: var(--White, #FFF);
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.course-list-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.course-list-subtext {
+  color: #000;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.table-title {
+  padding-left: 20px;
+}
+
+.table-column {
+  padding-right: 250px;
+}
+
+.table-row {
+  border: 1px solid rgba(0, 0, 0, 1);
+  background: var(--White, #FFF);
+}
+
+.table-content {
+  border-top: 1px solid rgba(0, 0, 0, 0.27);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
