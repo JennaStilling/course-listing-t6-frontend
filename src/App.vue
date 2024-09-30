@@ -2,27 +2,35 @@
 import CourseServices from "./services/CourseServices.js";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+
+import ocLogo from "./assets/oc-logo-white.png"
+const logoURL = ocLogo;
 </script>
 
 <template>
   <div id="app">
-    <div>
-      <router-link :to="{ name: 'courses' }">
-        <a>display Courses, </a>
-      </router-link>
-
-      <router-link :to="{ name: 'course', params: { id: 5 } }">
-        <a>display Course, </a>
-      </router-link>
-
-      <router-link :to="{ name: 'addCourse' }">
-        <a>add Course, </a>
-      </router-link>
-
-      <router-link :to="{ name: 'editCourse', params: { id: 5 } }">
-        <a>edit Course</a>
-      </router-link>
-    </div>
+    <nav class="navbar shadow">
+      <ul class="nav-links">
+        <div class="title">
+          <li>
+            <img :src="logoURL" contain/>
+          </li>
+          <li>
+            <a>{{ "Course Listing" }}</a>
+          </li>
+        </div>
+      </ul>
+      <ul class="nav-links">
+        <div class="menu">
+          <li>
+            <router-link :to="{name: 'courses'}"><a>LIST</a></router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'addCourse'}"><a>ADD COURSE</a></router-link>
+          </li>
+        </div>
+      </ul>
+    </nav>
     <router-view />
   </div>
 </template>
