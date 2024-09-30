@@ -45,32 +45,32 @@ function cancel() {
       <div class="form">
         <div class="form-group">
           <label for="department">Department</label>
-          <input v-model="course.department" type="text" id="department" />
+          <input v-model="course.department" type="text" id="department" disabled/>
         </div>
   
         <div class="form-group">
           <label for="courseNumber">Course Number</label>
-          <input v-model="course.courseNumber" type="text" id="courseNumber" />
+          <input v-model="course.courseNumber" type="text" id="courseNumber" disabled/>
         </div>
   
         <div class="form-group">
           <label for="level">Level</label>
-          <input v-model="course.level" type="text" id="level" />
+          <input v-model="course.level" type="text" id="level" disabled/>
         </div>
   
         <div class="form-group">
           <label for="hours">Hours</label>
-          <input v-model="course.hours" type="text" id="hours"/>
+          <input v-model="course.hours" type="text" id="hours" disabled/>
         </div>
   
         <div class="form-group">
           <label for="name">Name</label>
-          <input v-model="course.name" type="text" id="name" />
+          <input v-model="course.name" type="text" id="name" disabled/>
         </div>
   
         <div class="form-group">
           <label for="description">Description</label>
-          <input v-model="course.description" type="text" id="description" />
+          <input v-model="course.description" type="text" id="description" disabled/>
         </div>
       </div>
 
