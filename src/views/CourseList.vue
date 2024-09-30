@@ -46,15 +46,15 @@ getCourses();
             <table class="table-title">
                 <thead>
                     <tr>
-                        <th class="table-column">Title</th>
-                        <th class="table-column">Description</th>
+                        <th class="table-column">Course Number</th>
+                        <th class="table-column">Name</th>
                         <th class="table-column">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(item) in courses" :key="item.department">
-                        <td class="table-content">{{ item.department }}</td>
-                        <td class="table-content">{{ item.description }}</td>
+                        <td class="table-content">{{ item.courseNumber }}</td>
+                        <td class="table-content">{{ item.name }}</td>
                         <td class="table-content">
                             <img src="../assets/pencil.svg" @click="viewCourse(item)">
                             <img src="../assets/file.svg" @click="editCourse(item)">

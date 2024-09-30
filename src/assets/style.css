@@ -311,11 +311,13 @@ select {
 }
 
 .table-title {
-  padding-left: 20px;
+  padding-left: 0px;
+  width: 100%;
 }
 
 .table-column {
-  padding-right: 250px;
+  text-align: left;
+  padding-inline: 20px;
 }
 
 .table-row {
@@ -327,6 +329,7 @@ select {
   border-top: 1px solid rgba(0, 0, 0, 0.27);
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-inline: 20px;
   text-align: left;
   overflow: hidden;
   color: #000;
