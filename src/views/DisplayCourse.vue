@@ -19,7 +19,7 @@ onMounted(() => {
   //either props.id is not working or getCourse is not
   CourseServices.getCourse(props.id)
     .then((response) => {
-      course.value = response.data[0];
+      course.value = response.data;
       message.value = "";
     })
     .catch((error) => {
