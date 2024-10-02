@@ -48,9 +48,9 @@ export default {
   updateCourse(courseId, course) {
     return apiClient.put("/courses/" + courseId, course);
   },
-  // deleteList(listId) {
-  //   return apiClient.delete("lists/" + listId);
-  // },
+  deleteCourse(id) {
+    return apiClient.delete("/courses/" + id);
+  },
   // getListItems(listId) {
   //   return apiClient.get("lists/" + listId + "/items");
   // },
