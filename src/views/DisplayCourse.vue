@@ -39,8 +39,8 @@ function cancel() {
 
 <template>
     <div id="body">
-      <h1>Display Course</h1>
-      <h2>{{ message }}</h2>
+      <div class="header">Display Course</div>
+      <h2 class="header2">{{ message }}</h2>
       <br />
       <div class="form">
         <div class="form-group">
@@ -79,7 +79,7 @@ function cancel() {
       <button class="success" name="editCourse" v-on:click.prevent="edit()">
         Edit
       </button>
-      <button name="cancel" v-on:click.prevent="cancel()">Cancel</button>
+      <button class="cancel" name="cancel" v-on:click.prevent="cancel()">Cancel</button>
     </div>
   </template>
   
