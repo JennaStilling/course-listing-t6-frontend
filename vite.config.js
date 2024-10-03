@@ -14,7 +14,7 @@ export default () => {
 
     server: {
       host: "localhost",
-      port: 8081,
+      port: 3016,
     },
 
     base: baseURL,
