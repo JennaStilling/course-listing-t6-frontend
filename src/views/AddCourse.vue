@@ -15,6 +15,7 @@ const course = ref({
   description: ""
 });
 const message = ref("Enter data and click save");
+const errors = ref({});
 
 function addCourse() {
   CourseServices.addCourse(course.value)
@@ -70,21 +71,37 @@ const cancel = () => {
       <br />
       <div class="form">
         <div class="form-group">
+          <label for="department">Department 
+            <span class="text-error">{{ errors.department || "*" }}</span> 
+          </label>
           <input v-model="course.department" type="text" id="department" placeholder = "Department"/>
         </div>
         <div class="form-group">
+          <label for="courseNumber">Course Number
+            <span class="text-error">{{ errors.courseNumber || "*" }}</span> 
+          </label>
           <input v-model="course.courseNumber" type="text" id="courseNumber" placeholder = "Course Number"/>
         </div>
         <div class="form-group">
+          <label for="level">Level
+            <span class="text-error">{{ errors.level || "*" }}</span> 
+          </label>
           <input v-model="course.level" type="text" id="level" placeholder = "Level"/>
         </div>
         <div class="form-group">
+          <label for="hours">Hours
+            <span class="text-error">{{ errors.hours || "*" }}</span> 
+          </label>
           <input v-model="course.hours" type="text" id="hours" placeholder = "Hours"/>
         </div>
         <div class="form-group">
+          <label for="name">Name
+            <span class="text-error">{{ errors.name || "*" }}</span> 
+          </label>
           <input v-model="course.name" type="text" id="name" placeholder = "Name" />
         </div>
         <div class="form-group">
+          <label for="description">Description</label>
           <input v-model="course.description" type="text" id="description" placeholder = "Description"/>
         </div>
       </div>
