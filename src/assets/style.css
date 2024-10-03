@@ -234,19 +234,48 @@ button {
   background-color: #ee5044;
 }
 
+.cancel:hover {
+  color: black;
+  background-color: rgb(213, 223, 231);
+}
+
+.cancel {
+  color: white;
+  background-color: #aaa;
+}
+
+.success:hover {
+  color: white;
+  background-color: #811428;
+}
+
 .success {
   color: white;
-  background-color: #5cb85c;
+  background-color: #48111c;
 }
 
 .form {
   width: 100%;
   max-width: 30rem;
   margin: auto;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
 }
 
 .form-group {
   margin-bottom: 1rem;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
 }
 
 .form-group label {
@@ -256,10 +285,11 @@ button {
 
 input,
 select {
-  color: inherit;
+  color: #3c3b3b;
   border: 1px solid #666;
   padding: 0.5rem;
   font-size: 1rem;
+  font-family: Inter;
   background: inherit;
   border-radius: 0.25rem;
   width: 100%;
@@ -282,6 +312,12 @@ select {
   text-align: left;
   padding-left: 20px;
   padding-top: 20px;
+}
+
+.header2 {
+  font-family: Inter;
+  color: #202020;
+  font-weight: 550;
 }
 
 .course-list-body {

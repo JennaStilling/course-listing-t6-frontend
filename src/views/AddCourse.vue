@@ -65,8 +65,8 @@ const cancel = () => {
 
 <template>
     <div id="body">
-      <h1>Add Course</h1>
-      <h4>{{ message }}</h4>
+      <div class="header">Add Course</div><br />
+      <h2 class="header2">{{ message }}</h2>
       <br />
       <div class="form">
         <div class="form-group">
@@ -92,6 +92,6 @@ const cancel = () => {
       <button class="success" name="Save" v-on:click.prevent="addCourse()">
         Add
       </button>
-      <button name="Cancel" v-on:click.prevent="cancel()">Cancel</button>
+      <button class="cancel" name="Cancel" v-on:click.prevent="cancel()">Cancel</button>
     </div>
   </template>
