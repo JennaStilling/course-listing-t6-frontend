@@ -77,8 +77,8 @@ getCourses();
                         <td class="table-content">{{ item.courseNumber }}</td>
                         <td class="table-content">{{ item.name }}</td>
                         <td class="table-content">
-                            <img src="../assets/pencil.svg" @click="viewCourse(item)">
-                            <img src="../assets/file.svg" @click="editCourse(item)">
+                            <img src="../assets/pencil.svg" @click="editCourse(item)">
+                            <img src="../assets/file.svg" @click="viewCourse(item)">
                             <img src="../assets/trash.svg" @click="deleteDisplay(item)">
                         </td>
                     </tr>
