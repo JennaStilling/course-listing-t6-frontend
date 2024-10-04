@@ -4,7 +4,7 @@ var baseurl = "";
 if (process.env.NODE_ENV === "development") {
   baseurl = "http://localhost:3016/course-t6";
 } else {
-  baseurl = "/localhost:3016/course-t6";
+  baseurl = "/nodeapps/2024/project2/t6/localhost:3016/course-t6";
 
 }
 
