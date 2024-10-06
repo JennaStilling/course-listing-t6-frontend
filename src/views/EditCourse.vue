@@ -37,6 +37,9 @@ function save() {
     })
     .catch((error) => {
       if (error.response != null && error.response.status == "406") {
+        for(let obj in errors.value) {
+          errors.value[obj] = '*'
+        }
         for (let obj of error.response.data) {
           if (obj.attributeName === undefined) {
             obj.attributeName = "idNumber";
