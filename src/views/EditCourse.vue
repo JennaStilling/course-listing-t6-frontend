@@ -4,7 +4,7 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const message = ref("");
+const message = ref("Edit data and click save");
 
 const props = defineProps({
   id: {
@@ -19,7 +19,6 @@ onMounted(() => {
   CourseServices.getCourse(props.id)
     .then((response) => {
       course.value = response.data;
-      message.value = "Edit data and click save";
     })
     .catch((error) => {
       course.value = "Error: " + error.code + ":" + error.message;
@@ -38,6 +37,9 @@ function save() {
     })
     .catch((error) => {
       if (error.response != null && error.response.status == "406") {
+        for(let obj in errors.value) {
+          errors.value[obj] = '*'
+        }
         for (let obj of error.response.data) {
           if (obj.attributeName === undefined) {
             obj.attributeName = "idNumber";
@@ -60,27 +62,37 @@ function save() {
       <br />
       <div class="form">
         <div class="form-group">
-          <label for="department">Department</label>
+          <label for="department">Department 
+            <span class="text-error">{{ errors.department || "*" }}</span> 
+          </label>
           <input v-model="course.department" type="text" id="department" />
         </div>
   
         <div class="form-group">
-          <label for="courseNumber">Course Number</label>
+          <label for="courseNumber">Course Number
+            <span class="text-error">{{ errors.courseNumber || "*" }}</span> 
+          </label>
           <input v-model="course.courseNumber" type="text" id="courseNumber" />
         </div>
   
         <div class="form-group">
-          <label for="level">Level</label>
+          <label for="level">Level
+            <span class="text-error">{{ errors.level || "*" }}</span> 
+          </label>
           <input v-model="course.level" type="text" id="level" />
         </div>
   
         <div class="form-group">
-          <label for="hours">Hours</label>
+          <label for="hours">Hours
+            <span class="text-error">{{ errors.hours || "*" }}</span> 
+          </label>
           <input v-model="course.hours" type="text" id="hours" />
         </div>
   
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Name
+            <span class="text-error">{{ errors.name || "*" }}</span> 
+          </label>
           <input v-model="course.name" type="text" id="name" />
         </div>
   
